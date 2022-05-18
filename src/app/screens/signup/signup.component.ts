@@ -1,15 +1,12 @@
-import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
-
-declare var $: any;
+import {Component, ElementRef, OnInit} from '@angular/core';
 
 @Component({
-    selector: 'app-login',
-  styleUrls: ['./login.component.css'],
-    templateUrl: './login.component.html'
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-
-export class LoginComponent implements OnInit, OnDestroy {
-    test: Date = new Date();
+export class SignupComponent implements OnInit {
+test: Date = new Date();
     private toggleButton: any;
     private sidebarVisible: boolean;
     private nativeElement: Node;

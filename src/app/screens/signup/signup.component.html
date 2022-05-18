@@ -24,7 +24,7 @@
           </a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a [routerLink]="['/pages/medecins']" class="nav-link">
+          <a [routerLink]="['/medecins']" class="nav-link">
             request demo
           </a>
         </li>
@@ -34,7 +34,7 @@
           </a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a [routerLink]="['/pages/login']" class="nav-link">
+          <a [routerLink]="['/login']" class="nav-link">
             <em class="material-icons">fingerprint</em> Login
           </a>
         </li>
@@ -55,10 +55,28 @@
           <form class="form" method="" action="">
             <div class="card card-login card-hidden">
               <div class="card-header text-center " id="loginCard">
-                <h4 class="card-title text-white">Log in</h4>
+                <h4 class="card-title text-white">Sign up</h4>
               </div>
               <div class="card-body ">
                 <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <em class="material-icons">face</em>
+                      </span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="First Name ...">
+                  </div>
+                </span>
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <em class="material-icons">face</em>
+                      </span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Last Name...">
+                  </div>
                 </span>
                 <span class="bmd-form-group">
                   <div class="input-group">
@@ -82,7 +100,7 @@
                 </span>
               </div>
               <div class="card-footer justify-content-center">
-                <button class="btn btn-success btn-lg">login</button>
+                <button class="btn btn-success btn-lg">sign up</button>
               </div>
             </div>
           </form>
