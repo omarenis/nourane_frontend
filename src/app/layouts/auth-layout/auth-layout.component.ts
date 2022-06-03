@@ -80,7 +80,7 @@ export class AuthLayoutComponent implements OnInit {
       }, 400);
 
       this.mobile_menu_visible = 0;
-  };
+  }
   sidebarToggle() {
       if (!this.sidebarVisible) {
           this.sidebarOpen();

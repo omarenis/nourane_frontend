@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Doctor} from "../../models/Doctor";
+import {User} from "../../models/User";
+import {AbstractRestService} from "../../services/genericservice";
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-our-doctors',
@@ -7,18 +9,61 @@ import {Doctor} from "../../models/Doctor";
   styleUrls: ['./our-doctors.component.css']
 })
 export class OurDoctorsComponent implements OnInit {
-    doctors !: Doctor[];
-  constructor() { }
+    doctors !: User[];
+    role !: string;
+    private path = `${environment.url}/users`;
+  constructor(private service: AbstractRestService<User>) {}
 
   ngOnInit(): void {
-      this.doctors = [
-          {
-              firstname: 'omar',
-              lastname: 'triki',
-              email: 'omartriki712@gmail.com',
-              avatarUrl: ''
-          }
-      ]
-  }
+      const role = localStorage.getItem('role');
+      if(role !== null)
+      {
+          this.role = role;
+      }
 
+      this.service.list(this.path, {
+          params: {
+              role: 'doctor'
+          }
+      }).subscribe((response) => {this.doctors = response});
+      //
+      // this.doctors = [
+      //     {
+      //         id: 1,
+      //         firstname: 'omar',
+      //         lastname: 'triki',
+      //         email: 'omartriki712@gmail.com',
+      //         avatarUrl: '/assets/img/doctors/omar.png',
+      //         speciality: 'medecin generale',
+      //         telephone: '+216127616'
+      //     },
+      //     {
+      //         id: 2,
+      //         firstname: 'ahmed',
+      //         lastname: 'triki',
+      //         email: 'ahmedtriki712@gmail.com',
+      //         avatarUrl: '/assets/img/doctors/ahmed.jpg',
+      //         speciality: 'medecin generale',
+      //         telephone: '+216127615'
+      //     },
+      //     {
+      //         id: 3,
+      //         firstname: 'rim',
+      //         lastname: 'zouhairi',
+      //         email: 'zouhairirim712@gmail.com',
+      //         avatarUrl: '/assets/img/doctors/rim.jpg',
+      //         speciality: 'medecin generale',
+      //         telephone: '+21644320549'
+      //     },
+      //     {
+      //         id: 4,
+      //         firstname: 'rami',
+      //         lastname: 'triki',
+      //         email: 'ramitriki712@gmail.com',
+      //         avatarUrl: '/assets/img/doctors/rami.jpg',
+      //         speciality: 'medecin generale',
+      //         telephone: '+216128616'
+      //     }
+      // ]
+  }
 }

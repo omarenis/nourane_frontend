@@ -6,7 +6,7 @@ import {Component, ElementRef, OnInit} from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-test: Date = new Date();
+    test: Date = new Date();
     private toggleButton: any;
     private sidebarVisible: boolean;
     private nativeElement: Node;
@@ -20,7 +20,7 @@ test: Date = new Date();
       const navbar: HTMLElement = this.element.nativeElement;
       this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
         const body = document.getElementsByTagName('body')[0];
-        body.classList.add('login-page');
+        body.classList.add('register-page');
         body.classList.add('off-canvas-sidebar');
         const card = document.getElementsByClassName('card')[0];
         setTimeout(function() {
@@ -45,7 +45,7 @@ test: Date = new Date();
     }
     ngOnDestroy(){
       const body = document.getElementsByTagName('body')[0];
-      body.classList.remove('login-page');
+      body.classList.remove('register-page');
       body.classList.remove('off-canvas-sidebar');
     }
 }

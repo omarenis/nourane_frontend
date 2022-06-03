@@ -6,3 +6,13 @@
 {
     background: #042372
 }
+.wrapper
+{
+    background: white;
+    height: max-content;
+}
+.wrapper-full-page
+{
+    background: white;
+        height: max-content;
+}

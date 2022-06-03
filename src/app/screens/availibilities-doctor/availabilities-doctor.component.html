@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <em class="material-icons"></em>
+                        </div>
+                        <h4 class="card-title">les dates quand je suis disponible</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="table-responsive">
+                                    <table aria-describedby="listDoctors" class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="">date quand je suis valable</th>
+                                            <th class="">temps quand je suis valable</th>
+                                            <th class="">la liste des demandes de render vous pour cette date</th>
+                                            <th class="text-right"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody #tbody>
+                                        <tr *ngFor="let row of availabilities">
+                                            <td class="">{{row.dateTime | date: 'dd-MM-yyyy'}}</td>
+                                            <td class="">{{row.dateTime | date: 'hh:mm:ss'}}</td>
+                                            <td class="text-right">
+                                                <button  class="btn btn-danger" type="button">
+                                                    <em class="material-icons">trash</em>
+                                                </button>
+                                                <button class="btn btn-danger" type="button" >
+                                                    <em class="material-icons">trash</em>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 ml-auto mr-auto">
+                                <div class="map" id="worldMap"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

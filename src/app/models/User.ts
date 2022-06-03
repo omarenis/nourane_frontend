@@ -9,8 +9,10 @@ export interface User
   lastname: string;
   email: string;
   avatarUrl: string;
-  role: string;
-  isActive: boolean;
+  telephone: string;
+  role ?: string;
+  isActive ?: boolean;
   id ?: number;
+  speciality ?: string;
   localisation ?: Localisation;
 }

@@ -1,5 +1,5 @@
 export interface Availability {
     dateTime: Date | string;
-    doctor: number;
-
+    doctor ?: number;
+    id ?: number;
 }

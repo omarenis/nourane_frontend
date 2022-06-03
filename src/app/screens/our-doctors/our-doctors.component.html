@@ -1,36 +1,17 @@
-<div class="wrapper wrapper-full-page m-0 p-0 w-100">
-    <div class="page-header header-filter"
-         style=" background: white top center;">
-        <div class="container mt-5 m-0 w-100 ml-auto mr-auto">
-            <h1 class="h1 mt-5 text-center text-danger" style="">la liste de nos médecins</h1>
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img alt="" class="img-fluid rounded-start w-100" src="/assets/img/dcotor_appintment.jpg">
-                    </div>
-                    <form class="col-md-8">
-                        <div class="card-body">
 
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 540px;">
+        <div class="container w-100 ml-auto mr-auto">
+            <h1 class="h1 text-center text-danger" style="border: 0; margin-top: 5rem">la liste de nos médecins</h1>
+            <p class="alert alert-danger text-center" [style.font-weight]="'bold'" *ngIf="role === null || role === undefined">il faut se connecter pour demander un render vous</p>
+            <div class="mb-3" style="border: 0;">
                 <div class="row g-0">
+                    <div class="col-md-4 pt-2">
+                        <img alt="" class="img-fluid rounded-start w-100 ml-2" src="/assets/img/dcotor_appintment.jpg">
+                    </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">
-
-                            </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <app-doctors [rows]="doctors" [role]="role"></app-doctors>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img alt="..." class="img-fluid rounded-start" src="">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
