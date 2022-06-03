@@ -70,8 +70,8 @@
   @include material-animation-default();
 
   @supports (pointer-events: auto) {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
     transition-property: opacity;
     visibility: visible;
     pointer-events: none;

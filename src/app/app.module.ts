@@ -9,6 +9,9 @@ import { LoginComponent } from './screens/login/login.component';
 import {MatButtonModule} from "@angular/material/button";
 import { SignupComponent } from './screens/signup/signup.component';
 import {MatRadioModule} from "@angular/material/radio";
+import { OurDoctorsComponent } from './screens/our-doctors/our-doctors.component';
+import { DoctorsComponent } from './components/doctors/doctors.component';
+import { IndexComponent } from './screens/index/index.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import {MatRadioModule} from "@angular/material/radio";
     AdminLayoutComponent,
     SidebarComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    OurDoctorsComponent,
+    DoctorsComponent,
+    IndexComponent
   ],
     imports: [
         BrowserModule,
