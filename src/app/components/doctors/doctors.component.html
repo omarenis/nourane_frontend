@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <table class="table" aria-describedby="listDoctors">
+        <thead>
+        <tr>
+            <th class="text-center">image de médecin</th>
+            <th class="text-center">nom de médecin</th>
+            <th class="text-center">prénom de médecin</th>
+            <th class="text-center">email de médecin</th>
+            <th class="text-center">la spécialité</th>
+            <th class="text-right"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let row of rows">
+            <td class="text-center">{{row.avatarUrl}}</td>
+            <td class="text-center">{{row.firstname}}</td>
+            <td class="text-center">{{row.lastname}}</td>
+            <td class="text-center">{{row.email}}</td>
+            <td class="text-center">{{row.speciality}}</td>
+            <td class="td-actions text-right">
+                <ng-container *ngIf="typeUser === 'admin'">
+                    <button [ngClass]="{'btn-success': !row.isActive}" class="btn" mat-raised-button type="button">
+                        <em class="material-icons">{{row.isActive ?  'désactiver le compte ' : 'activer le compte' }}</em>
+                    </button>
+                </ng-container>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
